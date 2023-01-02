@@ -8,5 +8,6 @@
     <string name="tips">Tips</string>
     <string name="network_error">Error \n The network connection was lost</string>
     <string name="vege">Vege</string>
+    <string name="gluten_free">Free</string>
 
 </resources>

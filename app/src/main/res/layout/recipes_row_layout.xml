@@ -106,11 +106,12 @@
                     android:id="@+id/clock_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:tint="@color/yellow"
+                    android:layout_marginStart="14dp"
                     app:layout_constraintEnd_toEndOf="@+id/clock_textView"
                     app:layout_constraintStart_toStartOf="@+id/clock_textView"
                     app:layout_constraintTop_toTopOf="@+id/heart_imageView"
-                    app:srcCompat="@drawable/ic_time" />
+                    app:srcCompat="@drawable/ic_time"
+                    app:tint="@color/yellow" />
 
                 <TextView
                     android:id="@+id/clock_textView"
@@ -127,7 +128,7 @@
                     android:id="@+id/leaf_imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    applyVege="@{result.vegan}"
+                    applyVege="@{result.vegetarian}"
                     app:layout_constraintEnd_toEndOf="@+id/leaf_textView"
                     app:layout_constraintStart_toStartOf="@+id/leaf_textView"
                     app:layout_constraintTop_toTopOf="@+id/clock_imageView"
@@ -143,6 +144,27 @@
                     android:textAlignment="center"
                     app:layout_constraintStart_toEndOf="@+id/clock_textView"
                     app:layout_constraintTop_toBottomOf="@+id/leaf_imageView" />
+
+                <ImageView
+                    android:id="@+id/gluten_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    applyGlutenFree="@{result.glutenFree}"
+                    app:layout_constraintEnd_toEndOf="@+id/gluten_textView"
+                    app:layout_constraintStart_toStartOf="@+id/gluten_textView"
+                    app:layout_constraintTop_toTopOf="@+id/leaf_imageView"
+                    app:srcCompat="@drawable/ic_gluten" />
+
+                <TextView
+                    android:id="@+id/gluten_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    applyGlutenFree="@{result.glutenFree}"
+                    android:layout_marginStart="14dp"
+                    android:text="@string/gluten_free"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toEndOf="@+id/leaf_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/gluten_imageView" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

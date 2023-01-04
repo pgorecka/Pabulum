@@ -12,9 +12,9 @@ class RecipesRowBinding {
 
     companion object {
 
-        @BindingAdapter("loadThumbnail")
+        @BindingAdapter("loadThumbnailImg")
         @JvmStatic
-        fun loadThumbnail(imageView: ImageView, imageUrl: String) {
+        fun loadThumbnailImg(imageView: ImageView, imageUrl: String) {
             imageView.load(imageUrl) {
                 crossfade(600)
             }

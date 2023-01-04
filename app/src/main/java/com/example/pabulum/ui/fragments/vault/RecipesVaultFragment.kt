@@ -1,6 +1,7 @@
 package com.example.pabulum.ui.fragments.vault
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,8 +22,8 @@ class RecipesVaultFragment : Fragment() {
 
     private lateinit var mainViewModel: MainViewModel
     private lateinit var recipesViewModel: RecipesViewModel
-    private val mAdapter by lazy { SourceAdapter() }
-    private lateinit var mView: View
+    private val rAdapter by lazy { SourceAdapter() }
+    private lateinit var rView: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,24 +36,37 @@ class RecipesVaultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        mView = inflater.inflate(R.layout.fragment_recipes, container, false)
+        rView = inflater.inflate(R.layout.fragment_recipes, container, false)
 
         setupRecyclerView()
-        requestApiData()
+        readDatabase()
 
-        return mView
+        return rView
+    }
+
+    private fun readDatabase() {
+        mainViewModel.readRecipes.observe(viewLifecycleOwner, { database ->
+            if (database.isNotEmpty()) {
+                Log.d("Recipes fragment", "RequestDatabase called")
+                rAdapter.setData(database[0].foodRecipe)
+                hideShimmer()
+            } else {
+                requestApiData()
+            }
+        })
     }
 
     private fun requestApiData() {
+        Log.d("Recipes fragment", "RequestApiData called")
         mainViewModel.getRecipes(recipesViewModel.applyQueries())
         mainViewModel.recipesResponse.observe(viewLifecycleOwner, { response ->
             when(response){
                 is NetworkResult.Success -> {
-                    hideShimmerEffect()
-                    response.data?.let { mAdapter.setData(it) }
+                    hideShimmer()
+                    response.data?.let { rAdapter.setData(it) }
                 }
                 is NetworkResult.Error -> {
-                    hideShimmerEffect()
+                    hideShimmer()
                     Toast.makeText(
                         requireContext(),
                         response.message.toString(),
@@ -67,17 +81,17 @@ class RecipesVaultFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        mView.recyclerview.adapter = mAdapter
-        mView.recyclerview.layoutManager = LinearLayoutManager(requireContext())
+        rView.recyclerview.adapter = rAdapter
+        rView.recyclerview.layoutManager = LinearLayoutManager(requireContext())
         showShimmerEffect()
     }
 
     private fun showShimmerEffect() {
-        mView.recyclerview.showShimmer()
+        rView.recyclerview.showShimmer()
     }
 
-    private fun hideShimmerEffect() {
-        mView.recyclerview.hideShimmer()
+    private fun hideShimmer() {
+        rView.recyclerview.hideShimmer()
     }
 
 }

@@ -7,17 +7,21 @@
 
     <fragment
         android:id="@+id/recipesFragment"
-        android:name="com.example.pabulum.ui.fragments.vault.RecipesVaultFragment"
-        android:label="Recipes Vault"
+        android:name="com.example.pabulum.ui.fragments.recipes.RecipesFragment"
+        android:label="Recipes"
         tools:layout="@layout/fragment_recipes" >
         <action
-            android:id="@+id/action_recipesFragment_to_vaultBottomSheet"
-            app:destination="@id/vaultBottomSheet" />
+            android:id="@+id/action_recipesFragment_to_recipesBottomSheet"
+            app:destination="@id/recipesBottomSheet" />
+        <argument
+            android:name="bottomSheetReturn"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
     <fragment
-        android:id="@+id/favoriteRecipesFragment"
-        android:name="com.example.pabulum.ui.fragments.favorites.FavoriteRecipesFragment"
-        android:label="Favorite Recipes"
+        android:id="@+id/recipesVaultFragment"
+        android:name="com.example.pabulum.ui.fragments.vault.RecipesVaultFragment"
+        android:label="Recipes Vault"
         tools:layout="@layout/fragment_recipes_vault" />
     <fragment
         android:id="@+id/cookingTipsFragment"
@@ -25,12 +29,12 @@
         android:label="Cooking Tips"
         tools:layout="@layout/fragment_cooking_tips" />
     <dialog
-        android:id="@+id/vaultBottomSheet"
-        android:name="com.example.pabulum.ui.fragments.vault.bottomSheet.VaultBottomSheet"
-        android:label="vault_bottom_sheet"
-        tools:layout="@layout/vault_bottom_sheet" >
+        android:id="@+id/recipesBottomSheet"
+        android:name="com.example.pabulum.ui.fragments.recipes.bottomSheet.RecipesBottomSheet"
+        android:label="recipes_bottom_sheet"
+        tools:layout="@layout/recipes_bottom_sheet" >
         <action
-            android:id="@+id/action_vaultBottomSheet_to_recipesFragment"
+            android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
             app:destination="@id/recipesFragment" />
     </dialog>
 </navigation>

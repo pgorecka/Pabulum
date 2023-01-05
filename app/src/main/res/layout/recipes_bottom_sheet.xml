@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    tools:context=".ui.fragments.vault.bottomSheet.VaultBottomSheet">
+    tools:context=".ui.fragments.recipes.bottomSheet.RecipesBottomSheet">
 
     <TextView
         android:id="@+id/mealType_textView"
@@ -48,11 +48,12 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
-                    style="@style/ChipsStyle"
                     android:id="@+id/chip_mainCourse"
+                    style="@style/ChipsStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/main_course"/>
+                    android:text="@string/main_course"
+                    tools:ignore="TextContrastCheck" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
@@ -129,7 +130,7 @@
                     android:id="@+id/chip_dessert"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/desert"/>
+                    android:text="@string/dessert"/>
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
@@ -192,11 +193,12 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
-                    style="@style/ChipsStyle"
                     android:id="@+id/chip_vegetarian"
+                    style="@style/ChipsStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vegetarian"/>
+                    android:text="@string/vegetarian"
+                    tools:ignore="TextContrastCheck" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
@@ -273,6 +275,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diet_type_scrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/diet_type_scrollView"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

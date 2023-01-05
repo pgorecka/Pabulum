@@ -20,6 +20,18 @@ class Constants {
         const val DATABASE_NAME = "recipes_database"
         const val RECIPES_TABLE = "recipes_table"
 
+
+        // BOTTOM SHEET
+        const val DEFAULT_TYPE = "main course"
+        const val DEFAULT_DIET = "vegetarian"
+        const val DEFAULT_RECIPES_AMOUNT = "30"
+        const val PREFERENCES_TITLE = "app_preferences"
+        const val PREFERENCES_TYPE = "mealType"
+        const val PREFERENCES_TYPE_ID = "mealTypeId"
+        const val PREFERENCES_DIET = "dietType"
+        const val PREFERENCES_DIET_ID = "dietTypeId"
+
     }
 
 }
+

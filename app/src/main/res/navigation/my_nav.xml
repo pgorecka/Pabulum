@@ -8,16 +8,29 @@
     <fragment
         android:id="@+id/recipesFragment"
         android:name="com.example.pabulum.ui.fragments.vault.RecipesVaultFragment"
-        android:label="Recipes"
-        tools:layout="@layout/fragment_recipes" />
+        android:label="Recipes Vault"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_vaultBottomSheet"
+            app:destination="@id/vaultBottomSheet" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteRecipesFragment"
         android:name="com.example.pabulum.ui.fragments.favorites.FavoriteRecipesFragment"
-        android:label="Favorites"
+        android:label="Favorite Recipes"
         tools:layout="@layout/fragment_recipes_vault" />
     <fragment
-        android:id="@+id/foodJokeFragment"
+        android:id="@+id/cookingTipsFragment"
         android:name="com.example.pabulum.ui.fragments.tips.CookingTipsFragment"
-        android:label="Food Joke"
+        android:label="Cooking Tips"
         tools:layout="@layout/fragment_cooking_tips" />
+    <dialog
+        android:id="@+id/vaultBottomSheet"
+        android:name="com.example.pabulum.ui.fragments.vault.bottomSheet.VaultBottomSheet"
+        android:label="vault_bottom_sheet"
+        tools:layout="@layout/vault_bottom_sheet" >
+        <action
+            android:id="@+id/action_vaultBottomSheet_to_recipesFragment"
+            app:destination="@id/recipesFragment" />
+    </dialog>
 </navigation>

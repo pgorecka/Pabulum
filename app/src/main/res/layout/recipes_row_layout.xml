@@ -161,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="4dp"
-                    android:text="@string/gluten_free"
+                    android:text="@string/no_gluten"
                     android:textAlignment="center"
                     android:textSize="10sp"
                     app:layout_constraintStart_toEndOf="@+id/vege_textView"

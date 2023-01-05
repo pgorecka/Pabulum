@@ -6,8 +6,34 @@
     <string name="recipes">Recipes</string>
     <string name="vault">Vault</string>
     <string name="tips">Tips</string>
-    <string name="network_error">Error \n The network connection was lost</string>
+    <string name="network_error">Error \n No Network Connection</string>
     <string name="vege">Vege</string>
-    <string name="gluten_free">Free</string>
+    <string name="no_gluten">Free</string>
+    <string name="main_course">Main Course</string>
+    <string name="type_of_meal">Meal</string>
+    <string name="soup">Soup</string>
+    <string name="desert">Desert</string>
+    <string name="side_dish">Side Dish</string>
+    <string name="salad">Salad</string>
+    <string name="appetizer">Appetizer</string>
+    <string name="bread">Bread</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="drink">Drink</string>
+    <string name="snack">Snack</string>
+    <string name="finger_food">Finger Food</string>
+    <string name="marinade">Marinade</string>
+    <string name="sauce">Sauce</string>
+    <string name="beverage">Beverage</string>
+    <string name="diet">Diet</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="primal">Primal</string>
+    <string name="low_fodmap">Low FODMAP</string>
+    <string name="pescaterian">Pescaterian</string>
+    <string name="whole_30">Whole 30</string>
+    <string name="paleo">Paleo</string>
+    <string name="vegan">Vegan</string>
+    <string name="ketogenic">Ketogenic</string>
+    <string name="gluten_free">Gluten Free</string>
+    <string name="search">Search</string>
 
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#D5FFC529</color>
     <color name="colorPrimaryDark">#BE921D</color>
-    <color name="colorAccent">#D7D7D7</color>
+    <color name="colorAccent">#9AC312</color>
 
     <color name="white">#FFFFFF</color>
     <color name="lightGray">#F9F9F9</color>
@@ -14,5 +14,11 @@
     <color name="black">#000000</color>
     <color name="red">#FF4646</color>
     <color name="yellow">#FFC114</color>
-    <color name="green">#00C980</color>
+    <color name="green">#9AC312</color>
+    
+    // Chips
+    <color name="chipCheckedBackground">@color/colorAccent</color>
+    <color name="chipBackground">@color/lightGray</color>
+    <color name="chipCheckedTxtColor">@color/white</color>
+    <color name="chipTxtColor">@color/darkGray</color>
 </resources>

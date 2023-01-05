@@ -7,7 +7,7 @@
 
     <item android:id="@+id/recipesVaultFragment"
         android:title="@string/vault"
-        android:icon="@drawable/ic_vault" />
+        android:icon="@drawable/ic_valut" />
 
     <item android:id="@+id/cookingTipsFragment"
         android:title="@string/tips"

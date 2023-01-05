@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="@string/type_of_meal"
+        android:text="@string/diet_type"
         android:textSize="19sp"
         android:textStyle="bold"
         android:textColor="@color/dark"
@@ -123,7 +123,7 @@
                     android:id="@+id/chip_fingerFood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/finger_food"/>
+                    android:text="@string/fingerfood"/>
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
@@ -158,7 +158,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="13dp"
-        android:text="@string/diet"
+        android:text="@string/diet_type"
         android:textColor="@color/dark"
         android:textSize="19sp"
         android:textStyle="bold"
@@ -233,14 +233,14 @@
                     android:id="@+id/chip_whole30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/whole_30"/>
+                    android:text="@string/whole30"/>
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
                     android:id="@+id/chip_pescaterian"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/pescaterian"/>
+                    android:text="@string/pescatarian"/>
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"

@@ -5,6 +5,7 @@ import androidx.datastore.DataStore
 import androidx.datastore.preferences.*
 import com.example.pabulum.util.Constants.Companion.DEFAULT_DIET
 import com.example.pabulum.util.Constants.Companion.DEFAULT_TYPE
+import com.example.pabulum.util.Constants.Companion.PREFERENCES_BACK_ONLINE
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_DIET
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_DIET_ID
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_TITLE
@@ -26,6 +27,7 @@ class DataRepository @Inject constructor(@ApplicationContext private val context
         val checkedTypeId = preferencesKey<Int>(PREFERENCES_TYPE_ID)
         val checkedDiet = preferencesKey<String>(PREFERENCES_DIET)
         val checkedDietId = preferencesKey<Int>(PREFERENCES_DIET_ID)
+        val backOnline = preferencesKey<Boolean>(PREFERENCES_BACK_ONLINE)
     }
 
     private val dataStore: DataStore<androidx.datastore.preferences.Preferences> = context.createDataStore(
@@ -38,30 +40,48 @@ class DataRepository @Inject constructor(@ApplicationContext private val context
             preferences[Preferences.checkedTypeId] = mealTypeId
             preferences[Preferences.checkedDiet] = dietType
             preferences[Preferences.checkedDietId] = dietTypeId
+        }
+    }
 
+    suspend fun saveBackOnline(backOnline: Boolean) {
+        dataStore.edit {  preferences ->
+            preferences[Preferences.backOnline] = backOnline
         }
     }
 
     val readTypeAndDiet: Flow<TypeAndDiet> = dataStore.data
-        .catch {  exception ->
+        .catch { exception ->
             if (exception is IOException) {
                 emit(emptyPreferences())
             } else {
                 throw exception
                 }
             }
-        .map { preferences ->
-            val checkedType = preferences[Preferences.checkedType] ?: DEFAULT_TYPE
-            val checkedTypeId = preferences[Preferences.checkedTypeId] ?: 0
-            val checkedDiet = preferences[Preferences.checkedDiet] ?: DEFAULT_DIET
-            val checkedDietId = preferences[Preferences.checkedDietId] ?: 0
+            .map { preferences ->
+                val checkedType = preferences[Preferences.checkedType] ?: DEFAULT_TYPE
+                val checkedTypeId = preferences[Preferences.checkedTypeId] ?: 0
+                val checkedDiet = preferences[Preferences.checkedDiet] ?: DEFAULT_DIET
+                val checkedDietId = preferences[Preferences.checkedDietId] ?: 0
 
-            TypeAndDiet(
-                checkedType,
-                checkedTypeId,
-                checkedDiet,
-                checkedDietId
-            )
+                TypeAndDiet(
+                    checkedType,
+                    checkedTypeId,
+                    checkedDiet,
+                    checkedDietId
+                )
+            }
+
+    val readBackOnline: Flow<Boolean> = dataStore.data
+        .catch { exception ->
+            if (exception is IOException) {
+                emit(emptyPreferences())
+            } else {
+                throw exception
+            }
+        }
+        .map { preferences ->
+            val backOnline = preferences[Preferences.backOnline] ?: false
+            backOnline
         }
 }
 

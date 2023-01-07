@@ -17,6 +17,9 @@
             android:name="bottomSheetReturn"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_recipesFragment_to_featuresActivity"
+            app:destination="@id/featuresActivity" />
     </fragment>
     <fragment
         android:id="@+id/recipesVaultFragment"
@@ -37,4 +40,13 @@
             android:id="@+id/action_recipesBottomSheet_to_recipesFragment"
             app:destination="@id/recipesFragment" />
     </dialog>
+    <activity
+        android:id="@+id/featuresActivity"
+        android:name="com.example.pabulum.ui.FeaturesActivity"
+        android:label="Features"
+        tools:layout="@layout/activity_features" >
+        <argument
+            android:name="result"
+            app:argType="com.example.pabulum.models.Result" />
+    </activity>
 </navigation>

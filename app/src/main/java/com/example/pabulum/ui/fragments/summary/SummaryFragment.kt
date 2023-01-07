@@ -9,8 +9,8 @@ import androidx.core.content.ContextCompat
 import coil.load
 import com.example.pabulum.R
 import com.example.pabulum.models.Result
+import com.example.pabulum.util.Constants.Companion.RECIPE_RESULT
 import kotlinx.android.synthetic.main.fragment_summary.view.*
-import kotlinx.android.synthetic.main.recipes_row_layout.view.*
 import org.jsoup.Jsoup
 
 class SummaryFragment : Fragment() {
@@ -23,7 +23,7 @@ class SummaryFragment : Fragment() {
          val view = inflater.inflate(R.layout.fragment_summary, container, false)
 
          val args = arguments
-         val myBundle: Result? = args?.getParcelable("recipeBundle")
+         val myBundle: Result? = args?.getParcelable(RECIPE_RESULT)
 
          view.primary_imageView.load(myBundle?.image)
          view.name_textView.text = myBundle?.title

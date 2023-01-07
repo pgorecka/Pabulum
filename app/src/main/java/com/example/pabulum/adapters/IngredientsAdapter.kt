@@ -23,7 +23,10 @@ class IngredientsAdapter: RecyclerView.Adapter<IngredientsAdapter.MyViewHolder>(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.ingredient_img.load(BASE_IMG_URL + ingredientList[position].image)
+        holder.itemView.ingredient_img.load(BASE_IMG_URL + ingredientList[position].image) {
+            error(R.drawable.ic_error)
+            crossfade(650)
+        }
         holder.itemView.ingredient_name.text = ingredientList[position].name.capitalize()
         holder.itemView.ingredient_amount.text = ingredientList[position].amount.toString()
         holder.itemView.ingredient_unit.text = ingredientList[position].unit

@@ -37,5 +37,8 @@
     <string name="ketogenic">Ketogenic</string>
     <string name="gluten_free">Gluten Free</string>
     <string name="search">Search</string>
+    <string name="dairy_free">Dairy Free</string>
+    <string name="budget">Budget</string>
+    <string name="healthy">Healthy</string>
 
 </resources>

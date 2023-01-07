@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.navArgs
 import com.example.pabulum.R
+import com.example.pabulum.adapters.PagerAdapter
 import com.example.pabulum.ui.fragments.directions.DirectionsFragment
 import com.example.pabulum.ui.fragments.ingredients.IngredientsFragment
 import com.example.pabulum.ui.fragments.summary.SummaryFragment
@@ -37,7 +38,7 @@ class FeaturesActivity : AppCompatActivity() {
         val resultBundle = Bundle()
         resultBundle.putParcelable("recipeBundle", args.result)
 
-        val adapter = com.example.pabulum.adapters.PagerAdapter(
+        val adapter = PagerAdapter(
             resultBundle,
             fragments,
             title,

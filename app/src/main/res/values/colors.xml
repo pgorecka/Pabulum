@@ -7,6 +7,7 @@
     <color name="white">#FFFFFF</color>
     <color name="lightGray">#F9F9F9</color>
     <color name="mediumGray">#D1D1D1</color>
+    <color name="darkMediumGray">#5E5E5E</color>
     <color name="lightMediumGray">#80D1D1D1</color>
     <color name="darkGray">#4B4B4B</color>
     <color name="dark">#272D2F</color>

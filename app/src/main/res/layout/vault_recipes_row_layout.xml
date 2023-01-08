@@ -1,0 +1,165 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vaultEntity"
+            type="com.example.pabulum.data.database.entities.VaultEntity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recipesRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/vault_row_cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/lightMediumGray"
+        app:strokeWidth="1.6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/vault_recipe_imageView"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/vault_title_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="11dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/merriweather"
+                android:maxLines="2"
+                android:textColor="@color/darker"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/vault_recipe_imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/vault_description_textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/darkGray"
+                app:layout_constraintEnd_toEndOf="@+id/vault_title_textView"
+                app:layout_constraintStart_toStartOf="@+id/vault_title_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_title_textView" />
+
+            <ImageView
+                android:id="@+id/vault_favourite_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/vault_favourite_textView"
+                app:layout_constraintStart_toStartOf="@+id/vault_favourite_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_description_textView"
+                app:srcCompat="@drawable/ic_favorite"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/vault_favourite_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                app:layout_constraintStart_toStartOf="@+id/vault_description_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_favourite_imageView" />
+
+            <ImageView
+                android:id="@+id/vault_time_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/vault_time_textView"
+                app:layout_constraintStart_toStartOf="@+id/vault_time_textView"
+                app:layout_constraintTop_toTopOf="@+id/vault_favourite_imageView"
+                app:srcCompat="@drawable/ic_time"
+                app:tint="@color/yellow" />
+
+            <TextView
+                android:id="@+id/vault_time_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                app:layout_constraintStart_toEndOf="@+id/vault_favourite_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_time_imageView" />
+
+            <ImageView
+                android:id="@+id/vault_vege_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/vault_vege_textView"
+                app:layout_constraintStart_toStartOf="@+id/vault_vege_textView"
+                app:layout_constraintTop_toTopOf="@+id/vault_time_imageView"
+                app:srcCompat="@drawable/ic_vege" />
+
+            <TextView
+                android:id="@+id/vault_vege_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/vege"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/vault_time_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_vege_imageView" />
+
+            <ImageView
+                android:id="@+id/vault_gluten_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/vault_gluten_textView"
+                app:layout_constraintStart_toStartOf="@+id/vault_gluten_textView"
+                app:layout_constraintTop_toTopOf="@+id/vault_vege_imageView"
+                app:srcCompat="@drawable/ic_gluten" />
+
+            <TextView
+                android:id="@+id/vault_gluten_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/no_gluten"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/vault_vege_textView"
+                app:layout_constraintTop_toBottomOf="@+id/vault_gluten_imageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

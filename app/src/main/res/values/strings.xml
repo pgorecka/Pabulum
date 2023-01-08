@@ -41,5 +41,6 @@
     <string name="budget">Budget</string>
     <string name="healthy">Healthy</string>
     <string name="save_to_vault">Save to Vault</string>
+    <string name="vault_is_empty">Pabulum Vault\n is empty</string>
 
 </resources>

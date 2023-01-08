@@ -1,4 +1,4 @@
-package com.example.pabulum.data.database
+package com.example.pabulum.data.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

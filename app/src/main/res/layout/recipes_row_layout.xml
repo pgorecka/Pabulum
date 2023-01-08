@@ -94,9 +94,10 @@
                     android:id="@+id/favourite_textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
                     android:text="@{String.valueOf(result.aggregateLikes)}"
-                    android:textColor="@color/red"
                     android:textAlignment="center"
+                    android:textColor="@color/red"
                     app:layout_constraintStart_toStartOf="@+id/description_textView"
                     app:layout_constraintTop_toBottomOf="@+id/favourite_imageView" />
 
@@ -136,7 +137,7 @@
                     applyVege="@{result.vegetarian}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="19dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/vege"
                     android:textAlignment="center"

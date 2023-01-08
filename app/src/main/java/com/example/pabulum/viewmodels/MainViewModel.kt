@@ -7,7 +7,8 @@ import android.net.NetworkCapabilities
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.example.pabulum.data.Repository
-import com.example.pabulum.data.database.RecipesEntity
+import com.example.pabulum.data.database.entities.RecipesEntity
+import com.example.pabulum.data.database.entities.VaultEntity
 import com.example.pabulum.models.FoodRecipe
 import com.example.pabulum.util.NetworkResult
 import kotlinx.coroutines.Dispatchers
@@ -23,12 +24,26 @@ class MainViewModel @ViewModelInject constructor(
 
     // ROOM
 
-    val readRecipes: LiveData<List<RecipesEntity>> = repository.local.readDatabase().asLiveData()
+    val readRecipes: LiveData<List<RecipesEntity>> = repository.local.readRecipes().asLiveData()
+
+    val readVaultRecipes: LiveData<List<VaultEntity>> = repository.local.readVaultRecipes().asLiveData()
 
     private fun insertRecipes(recipesEntity: RecipesEntity) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.insertRecipes(recipesEntity)
         }
+
+    private fun insertVaultRecipe(vaultEntity: VaultEntity) = viewModelScope.launch(Dispatchers.IO) {
+        repository.local.insertVaultRecipe(vaultEntity)
+    }
+
+    private fun deleteVaultRecipe(vaultEntity: VaultEntity) = viewModelScope.launch(Dispatchers.IO) {
+        repository.local.deleteVaultRecipe(vaultEntity)
+    }
+
+    private fun deleteAllVaultRecipes() = viewModelScope.launch(Dispatchers.IO) {
+        repository.local.deleteAllVaultRecipes()
+    }
 
     // RETROFIT
 

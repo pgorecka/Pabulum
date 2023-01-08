@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.example.pabulum.data.database.RecipesEntity
+import com.example.pabulum.data.database.entities.RecipesEntity
 import com.example.pabulum.models.FoodRecipe
 import com.example.pabulum.util.NetworkResult
 

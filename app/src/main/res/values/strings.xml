@@ -40,5 +40,6 @@
     <string name="dairy_free">Dairy Free</string>
     <string name="budget">Budget</string>
     <string name="healthy">Healthy</string>
+    <string name="save_to_vault">Save to Vault</string>
 
 </resources>

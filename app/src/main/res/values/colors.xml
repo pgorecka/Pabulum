@@ -16,6 +16,7 @@
     <color name="red">#FF4646</color>
     <color name="yellow">#FFC114</color>
     <color name="green">#9AC312</color>
+    <color name="orange">#FE7240</color>
     
     // Chips
     <color name="chipCheckedBackground">@color/colorAccent</color>

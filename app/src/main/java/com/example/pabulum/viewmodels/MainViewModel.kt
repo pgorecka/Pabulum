@@ -33,16 +33,19 @@ class MainViewModel @ViewModelInject constructor(
             repository.local.insertRecipes(recipesEntity)
         }
 
-    private fun insertVaultRecipe(vaultEntity: VaultEntity) = viewModelScope.launch(Dispatchers.IO) {
-        repository.local.insertVaultRecipe(vaultEntity)
+    fun insertVaultRecipe(vaultEntity: VaultEntity) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.insertVaultRecipe(vaultEntity)
     }
 
-    private fun deleteVaultRecipe(vaultEntity: VaultEntity) = viewModelScope.launch(Dispatchers.IO) {
-        repository.local.deleteVaultRecipe(vaultEntity)
+    fun deleteVaultRecipe(vaultEntity: VaultEntity) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.deleteVaultRecipe(vaultEntity)
     }
 
-    private fun deleteAllVaultRecipes() = viewModelScope.launch(Dispatchers.IO) {
-        repository.local.deleteAllVaultRecipes()
+    private fun deleteAllVaultRecipes() =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.deleteAllVaultRecipes()
     }
 
     // RETROFIT

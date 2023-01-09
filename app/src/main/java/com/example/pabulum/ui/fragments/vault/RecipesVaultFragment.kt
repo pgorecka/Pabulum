@@ -18,8 +18,8 @@ import kotlinx.android.synthetic.main.fragment_recipes_vault.view.*
 @AndroidEntryPoint
 class RecipesVaultFragment : Fragment() {
 
-    private val rAdapter: VaultRecipesAdapter by lazy { VaultRecipesAdapter() }
     private val mainViewModel: MainViewModel by viewModels()
+    private val rAdapter: VaultRecipesAdapter by lazy { VaultRecipesAdapter(requireActivity(), mainViewModel) }
     private var _binding: FragmentRecipesVaultBinding? = null
     private val binding get() = _binding!!
 

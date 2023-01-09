@@ -17,10 +17,17 @@
     <color name="yellow">#FFC114</color>
     <color name="green">#9AC312</color>
     <color name="orange">#FE7240</color>
+
+    // Contextual Action
+    <color name="statusBar">@color/colorPrimaryDark</color>
+    <color name="contextualStatus">@color/darker</color>
+    <color name="contextualAction">@color/dark</color>
+    <color name="cardBgLightColor">#20325614</color>
     
     // Chips
     <color name="chipCheckedBackground">@color/colorAccent</color>
     <color name="chipBackground">@color/lightGray</color>
     <color name="chipCheckedTxtColor">@color/white</color>
     <color name="chipTxtColor">@color/darkGray</color>
+    
 </resources>

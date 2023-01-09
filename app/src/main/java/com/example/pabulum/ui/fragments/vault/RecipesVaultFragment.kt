@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pabulum.R
 import com.example.pabulum.adapters.VaultRecipesAdapter
+import com.example.pabulum.databinding.FragmentRecipesVaultBinding
 import com.example.pabulum.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_recipes_vault.view.*
@@ -19,21 +20,22 @@ class RecipesVaultFragment : Fragment() {
 
     private val rAdapter: VaultRecipesAdapter by lazy { VaultRecipesAdapter() }
     private val mainViewModel: MainViewModel by viewModels()
+    private var _binding: FragmentRecipesVaultBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_recipes_vault, container, false)
+        _binding = FragmentRecipesVaultBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+        binding.mainViewModel = mainViewModel
+        binding.rAdapter = rAdapter
 
-        setupRecyclerView(view.recipesVaultRecyclerView)
+        setupRecyclerView(binding.recipesVaultRecyclerView)
 
-        mainViewModel.readVaultRecipes.observe(viewLifecycleOwner, { vaultEntity ->
-            rAdapter.setData(vaultEntity)
-        })
-
-        return view
+        return binding.root
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
@@ -41,4 +43,8 @@ class RecipesVaultFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

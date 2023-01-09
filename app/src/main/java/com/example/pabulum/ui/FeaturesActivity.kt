@@ -73,7 +73,7 @@ class FeaturesActivity : AppCompatActivity() {
             try {
                 for (savedRecipe in vaultEntity) {
                     if (savedRecipe.result.id == args.result.id) {
-                        changeMenuItemColor(menuItem, R.color.orange)
+                        changeMenuItemColor(menuItem, R.color.yellow)
                         savedRecipeId = savedRecipe.id
                         recipeSaved = true
                     }
@@ -102,7 +102,7 @@ class FeaturesActivity : AppCompatActivity() {
                 args.result
             )
         mainViewModel.insertVaultRecipe(vaultEntity)
-        changeMenuItemColor(item, R.color.orange)
+        changeMenuItemColor(item, R.color.yellow)
         showSnackbar("Saved to vault")
         recipeSaved = true
     }

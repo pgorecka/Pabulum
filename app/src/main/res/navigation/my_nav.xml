@@ -25,7 +25,11 @@
         android:id="@+id/recipesVaultFragment"
         android:name="com.example.pabulum.ui.fragments.vault.RecipesVaultFragment"
         android:label="Recipes Vault"
-        tools:layout="@layout/fragment_recipes_vault" />
+        tools:layout="@layout/fragment_recipes_vault" >
+        <action
+            android:id="@+id/action_recipesVaultFragment_to_featuresActivity"
+            app:destination="@id/featuresActivity" />
+    </fragment>
     <fragment
         android:id="@+id/cookingTipsFragment"
         android:name="com.example.pabulum.ui.fragments.tips.CookingTipsFragment"

@@ -2,11 +2,14 @@ package com.example.pabulum.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pabulum.data.database.entities.VaultEntity
 import com.example.pabulum.databinding.VaultRecipesRowLayoutBinding
+import com.example.pabulum.ui.fragments.vault.RecipesVaultFragmentDirections
 import com.example.pabulum.util.RecipesDiffUtil
+import kotlinx.android.synthetic.main.vault_recipes_row_layout.view.*
 
 class VaultRecipesAdapter: RecyclerView.Adapter<VaultRecipesAdapter.MyViewHolder>() {
 
@@ -36,6 +39,11 @@ class VaultRecipesAdapter: RecyclerView.Adapter<VaultRecipesAdapter.MyViewHolder
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val selectedRecipe = vaultRecipes[position]
         holder.bind(selectedRecipe)
+
+        holder.itemView.vaultRecipesRowLayout.setOnClickListener {
+            val action = RecipesVaultFragmentDirections.actionRecipesVaultFragmentToFeaturesActivity(selectedRecipe.result)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

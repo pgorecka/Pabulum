@@ -166,11 +166,18 @@ class VaultRecipesAdapter(
             Snackbar.LENGTH_SHORT
         ).setAction("OK") {}.show()
     }
+
     fun setData(newVaultRecipes: List<VaultEntity>) {
         val vaultRecipesDiffUtil =
             RecipesDiffUtil(vaultRecipes, newVaultRecipes)
         val diffUtilResult = DiffUtil.calculateDiff(vaultRecipesDiffUtil)
         vaultRecipes = newVaultRecipes
         diffUtilResult.dispatchUpdatesTo(this)
+    }
+
+    fun clearContextualActionMode() {
+        if (this::rActionMode.isInitialized) {
+            rActionMode.finish()
+        }
     }
 }

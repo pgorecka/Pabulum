@@ -70,7 +70,7 @@
                     android:layout_marginTop="12dp"
                     android:ellipsize="end"
                     android:maxLines="3"
-                    android:text="@{vaultEntity.result.summary}"
+                    parseHtml="@{vaultEntity.result.summary}"
                     android:textColor="@color/darkGray"
                     app:layout_constraintEnd_toEndOf="@+id/vault_title_textView"
                     app:layout_constraintStart_toStartOf="@+id/vault_title_textView"

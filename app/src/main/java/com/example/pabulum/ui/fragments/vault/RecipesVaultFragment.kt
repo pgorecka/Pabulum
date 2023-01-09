@@ -1,10 +1,8 @@
 package com.example.pabulum.ui.fragments.vault
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +10,7 @@ import com.example.pabulum.R
 import com.example.pabulum.adapters.VaultRecipesAdapter
 import com.example.pabulum.databinding.FragmentRecipesVaultBinding
 import com.example.pabulum.viewmodels.MainViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_recipes_vault.view.*
 
@@ -33,9 +32,31 @@ class RecipesVaultFragment : Fragment() {
         binding.mainViewModel = mainViewModel
         binding.rAdapter = rAdapter
 
+        setHasOptionsMenu(true)
+
         setupRecyclerView(binding.recipesVaultRecyclerView)
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.vault_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.remove_all_vault_recipes_menu) {
+            mainViewModel.deleteAllVaultRecipes()
+            showSnackbar()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun showSnackbar() {
+        Snackbar.make(
+            binding.root,
+            "All recipes removed.",
+            Snackbar.LENGTH_SHORT
+        ).setAction("OK") {}.show()
     }
 
     private fun setupRecyclerView(recyclerView: RecyclerView) {
@@ -46,5 +67,6 @@ class RecipesVaultFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+        rAdapter.clearContextualActionMode()
     }
 }

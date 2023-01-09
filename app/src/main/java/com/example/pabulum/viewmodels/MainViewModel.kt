@@ -43,7 +43,7 @@ class MainViewModel @ViewModelInject constructor(
             repository.local.deleteVaultRecipe(vaultEntity)
     }
 
-    private fun deleteAllVaultRecipes() =
+    fun deleteAllVaultRecipes() =
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.deleteAllVaultRecipes()
     }

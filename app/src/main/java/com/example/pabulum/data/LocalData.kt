@@ -20,7 +20,7 @@ class LocalData @Inject constructor(
         return recipesDao.fetchRecipes()
     }
 
-    fun readFoodFact(): Flow<List<FoodFact>> {
+    fun readFoodFact(): Flow<List<FoodFactEntity>> {
         return recipesDao.readFoodFact()
     }
 

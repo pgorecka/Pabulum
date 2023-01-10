@@ -18,13 +18,13 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/food_joke_cardView"
+            readApi3="@{mainViewModel.foodFactResponse}"
+            readDatabase3="@{mainViewModel.readFoodFacts}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:cardCornerRadius="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +50,7 @@
                     android:text="@string/lorem_ipsum"
                     android:textColor="@color/dark"
                     android:textSize="20sp"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -65,9 +66,9 @@
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginBottom="24dp"
             android:visibility="invisible"
+            readApi3="@{mainViewModel.foodFactResponse}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

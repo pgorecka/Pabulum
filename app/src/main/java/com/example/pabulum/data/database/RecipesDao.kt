@@ -26,7 +26,7 @@ interface RecipesDao {
     fun readVaultRecipes(): Flow<List<VaultEntity>>
 
     @Query("SELECT * FROM facts_table ORDER BY id ASC")
-    fun readFoodFact(): Flow<List<FoodFact>>
+    fun readFoodFact(): Flow<List<FoodFactEntity>>
 
     @Delete
     suspend fun deleteVaultRecipe(vaultEntity: VaultEntity)

@@ -59,7 +59,7 @@ class FoodFactsFragment : Fragment() {
       lifecycleScope.launch {
           mainViewModel.readFoodFacts.observe(viewLifecycleOwner, { database ->
               if (database.isNotEmpty() && database != null) {
-                  binding.factsTextView.text = database[0].text
+                  binding.factsTextView.text = database[0].foodFact.text
               }
           })
       }

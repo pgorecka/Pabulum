@@ -5,7 +5,7 @@
 
     <string name="recipes">Recipes</string>
     <string name="vault">Vault</string>
-    <string name="tips">Tips</string>
+    <string name="facts">Facts</string>
     <string name="network_error">Error \n No Network Connection</string>
 
     <string name="no_gluten">Free</string>
@@ -44,5 +44,7 @@
     <string name="vault_is_empty">Pabulum Vault\n is empty</string>
     <string name="remove">Remove</string>
     <string name="remove_all">Remove all</string>
+    <string name="lorem_ipsum">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</string>
+    <string name="error">Error</string>
 
 </resources>

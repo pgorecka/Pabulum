@@ -9,8 +9,8 @@
         android:title="@string/vault"
         android:icon="@drawable/ic_valut" />
 
-    <item android:id="@+id/cookingTipsFragment"
-        android:title="@string/tips"
-        android:icon="@drawable/ic_tips" />
+    <item android:id="@+id/foodFactsFragment"
+        android:title="@string/facts"
+        android:icon="@drawable/ic_facts" />
 
 </menu>

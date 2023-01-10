@@ -31,10 +31,10 @@
             app:destination="@id/featuresActivity" />
     </fragment>
     <fragment
-        android:id="@+id/cookingTipsFragment"
-        android:name="com.example.pabulum.ui.fragments.tips.CookingTipsFragment"
-        android:label="Cooking Tips"
-        tools:layout="@layout/fragment_cooking_tips" />
+        android:id="@+id/foodFactsFragment"
+        android:name="com.example.pabulum.ui.fragments.facts.FoodFactsFragment"
+        android:label="Food Facts"
+        tools:layout="@layout/fragment_food_facts" />
     <dialog
         android:id="@+id/recipesBottomSheet"
         android:name="com.example.pabulum.ui.fragments.recipes.bottomSheet.RecipesBottomSheet"

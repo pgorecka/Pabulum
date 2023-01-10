@@ -1,5 +1,6 @@
 package com.example.pabulum.data.network
 
+import com.example.pabulum.models.FoodFact
 import com.example.pabulum.models.FoodRecipe
 import retrofit2.Response
 import retrofit2.http.GET
@@ -17,5 +18,10 @@ interface MealRecipesApi {
     suspend fun searchRecipes(
         @QueryMap searchQuery: Map<String, String>
     ): Response<FoodRecipe>
+
+    @GET("food/trivia/random")
+    suspend fun getFact(
+        @Query("apiKey") apiKey: String
+    ): Response<FoodFact>
 
 }

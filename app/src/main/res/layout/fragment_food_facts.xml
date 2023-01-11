@@ -50,7 +50,6 @@
                     android:text="@string/lorem_ipsum"
                     android:textColor="@color/dark"
                     android:textSize="20sp"
-                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -77,11 +76,11 @@
             android:id="@+id/facts_error_imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-
-
             android:alpha="0.5"
             android:src="@drawable/ic_dissatisfied"
             android:visibility="invisible"
+            readApi4="@{mainViewModel.foodFactResponse}"
+            readDatabase4="@{mainViewModel.readFoodFacts}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -93,14 +92,14 @@
             android:id="@+id/facts_error_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-
             android:layout_marginTop="8dp"
             android:alpha="0.5"
             android:text="@string/error"
             android:textSize="17sp"
             android:textStyle="bold"
             android:visibility="invisible"
+            readApi4="@{mainViewModel.foodFactResponse}"
+            readDatabase4="@{mainViewModel.readFoodFacts}"
             app:layout_constraintEnd_toEndOf="@+id/facts_error_imageView"
             app:layout_constraintStart_toStartOf="@+id/facts_error_imageView"
             app:layout_constraintTop_toBottomOf="@+id/facts_error_imageView" />

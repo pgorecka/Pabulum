@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
+import android.view.*
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -23,6 +23,7 @@ class FoodFactsFragment : Fragment() {
     private val mainViewModel by viewModels<MainViewModel> ()
     private var _binding: FragmentFoodFactsBinding? = null
     private val binding get() = _binding!!
+    private var foodFact = "No Facts"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,10 +35,14 @@ class FoodFactsFragment : Fragment() {
         binding.mainViewModel = mainViewModel
 
         mainViewModel.getFoodFact(API_KEY)
+
         mainViewModel.foodFactResponse.observe(viewLifecycleOwner, { response ->
             when (response) {
                 is NetworkResult.Success -> {
                     binding.factsTextView.text = response.data?.text
+                    if (response.data != null) {
+                        foodFact = response.data.text
+                    }
                 }
                 is NetworkResult.Error -> {
                     loadDataFromCache()
@@ -55,15 +60,18 @@ class FoodFactsFragment : Fragment() {
 
         return binding.root
     }
+
     private fun loadDataFromCache() {
       lifecycleScope.launch {
           mainViewModel.readFoodFacts.observe(viewLifecycleOwner, { database ->
-              if (database.isNotEmpty() && database != null) {
+              if (!database.isNullOrEmpty()) {
                   binding.factsTextView.text = database[0].foodFact.text
+               //   foodFact = database[0].foodFact.text
               }
           })
       }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

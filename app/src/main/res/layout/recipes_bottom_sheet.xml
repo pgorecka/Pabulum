@@ -42,18 +42,25 @@
                 android:id="@+id/meal_type_chipGroup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:checkedChip="@+id/chip_mainCourse"
+                app:checkedChip="@+id/chip_appetizer"
                 app:selectionRequired="true"
                 app:singleLine="true"
                 app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/ChipsStyle"
+                    android:id="@+id/chip_appetizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/appetizer"
+                    tools:ignore="TextContrastCheck"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chip_mainCourse"
                     style="@style/ChipsStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/main_course"
-                    tools:ignore="TextContrastCheck" />
+                    android:text="@string/main_course" />
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"
@@ -75,13 +82,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/soup"/>
-
-                <com.google.android.material.chip.Chip
-                    style="@style/ChipsStyle"
-                    android:id="@+id/chip_appetizer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/appetizer"/>
 
                 <com.google.android.material.chip.Chip
                     style="@style/ChipsStyle"

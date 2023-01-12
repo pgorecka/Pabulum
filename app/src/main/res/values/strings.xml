@@ -46,5 +46,6 @@
     <string name="remove_all">Remove all</string>
     <string name="lorem_ipsum">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</string>
     <string name="error">Error</string>
+    <string name="share">Share</string>
 
 </resources>

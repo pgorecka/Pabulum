@@ -23,6 +23,21 @@
     <color name="contextualStatus">@color/darker</color>
     <color name="contextualAction">@color/dark</color>
     <color name="cardBgLightColor">#20325614</color>
+    <color name="actionBarBgColor">@color/colorPrimary</color>
+    
+    // Theme
+    <color name="strokeColor">@color/lightMediumGray</color>
+    <color name="cardBgColor">@color/white</color>
+    <color name="titleColor">@color/darker</color>
+    <color name="descriptionColor">@color/darkGray</color>
+    <color name="backgroundColor">@color/lightGray</color>
+    <color name="placeholderColor">@color/mediumGray</color>
+    <color name="itemColor">@color/darker</color>
+    
+    //Bottom Nav
+    <color name="bottomNavBackground">@color/white</color>
+    <color name="bottomNavItemColor">@color/darkGray</color>
+    <color name="bottomNavCheckedItemColor">@color/colorPrimary</color>
     
     // Chips
     <color name="chipCheckedBackground">@color/colorAccent</color>
@@ -30,4 +45,6 @@
     <color name="chipCheckedTxtColor">@color/white</color>
     <color name="chipTxtColor">@color/darkGray</color>
     
+
+
 </resources>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    app:layoutDescription="@xml/fragment_summary_scene"
     tools:context=".ui.fragments.summary.SummaryFragment">
 
 
@@ -49,11 +50,11 @@
         android:id="@+id/minutes_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tint="@color/white"
         android:src="@drawable/ic_time"
         app:layout_constraintBottom_toTopOf="@+id/minutes_textView"
         app:layout_constraintEnd_toEndOf="@+id/minutes_textView"
-        app:layout_constraintStart_toStartOf="@+id/minutes_textView" />
+        app:layout_constraintStart_toStartOf="@+id/minutes_textView"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/likes_textView"
@@ -71,11 +72,11 @@
         android:id="@+id/likes_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tint="@color/white"
         android:src="@drawable/ic_favorite"
         app:layout_constraintBottom_toTopOf="@+id/likes_textView"
         app:layout_constraintEnd_toEndOf="@+id/likes_textView"
-        app:layout_constraintStart_toStartOf="@+id/likes_textView" />
+        app:layout_constraintStart_toStartOf="@+id/likes_textView"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/name_textView"
@@ -99,17 +100,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintStart_toStartOf="@+id/name_textView"
-        app:layout_constraintTop_toBottomOf="@+id/name_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/name_textView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/vegan_marker_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textColor="@color/darkMediumGray"
         android:text="@string/vegan"
+        android:textColor="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/vegan_marker_imageView"
         app:layout_constraintStart_toEndOf="@+id/vegan_marker_imageView"
         app:layout_constraintTop_toTopOf="@+id/vegan_marker_imageView" />
@@ -120,9 +121,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintStart_toStartOf="@+id/vegan_marker_imageView"
-        app:layout_constraintTop_toBottomOf="@+id/vegan_marker_imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/vegan_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/vegetarian_marker_textView"
@@ -141,10 +142,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/vegan_marker_textView"
         app:layout_constraintStart_toEndOf="@+id/vegan_marker_textView"
-        app:layout_constraintTop_toTopOf="@+id/vegan_marker_textView" />
+        app:layout_constraintTop_toTopOf="@+id/vegan_marker_textView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/dairy_free_marker_textView"
@@ -153,10 +154,10 @@
         android:layout_marginStart="8dp"
         android:text="@string/dairy_free"
         android:textColor="@color/darkMediumGray"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/dairy_free_marker_imageView"
         app:layout_constraintStart_toEndOf="@+id/dairy_free_marker_imageView"
-        app:layout_constraintTop_toTopOf="@+id/dairy_free_marker_imageView" />
+        app:layout_constraintTop_toTopOf="@+id/dairy_free_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <ImageView
         android:id="@+id/gluten_free_marker_imageView"
@@ -164,9 +165,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintStart_toStartOf="@+id/dairy_free_marker_imageView"
-        app:layout_constraintTop_toBottomOf="@+id/dairy_free_marker_imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/dairy_free_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/gluten_free_marker_textView"
@@ -175,10 +176,10 @@
         android:layout_marginStart="8dp"
         android:text="@string/gluten_free"
         android:textColor="@color/darkMediumGray"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/gluten_free_marker_imageView"
         app:layout_constraintStart_toEndOf="@+id/gluten_free_marker_imageView"
-        app:layout_constraintTop_toTopOf="@+id/gluten_free_marker_imageView" />
+        app:layout_constraintTop_toTopOf="@+id/gluten_free_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <ImageView
         android:id="@+id/budget_marker_imageView"
@@ -186,10 +187,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/dairy_free_marker_textView"
         app:layout_constraintStart_toEndOf="@+id/dairy_free_marker_textView"
-        app:layout_constraintTop_toTopOf="@+id/dairy_free_marker_textView" />
+        app:layout_constraintTop_toTopOf="@+id/dairy_free_marker_textView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/budget_marker_textView"
@@ -198,10 +199,10 @@
         android:layout_marginStart="8dp"
         android:text="@string/budget"
         android:textColor="@color/darkMediumGray"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintBottom_toBottomOf="@+id/budget_marker_imageView"
         app:layout_constraintStart_toEndOf="@+id/budget_marker_imageView"
-        app:layout_constraintTop_toTopOf="@+id/budget_marker_imageView" />
+        app:layout_constraintTop_toTopOf="@+id/budget_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <ImageView
         android:id="@+id/healthy_marker_imageView"
@@ -209,9 +210,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:src="@drawable/ic_indicator"
-        app:tint="@color/darkMediumGray"
         app:layout_constraintStart_toStartOf="@+id/budget_marker_imageView"
-        app:layout_constraintTop_toBottomOf="@+id/budget_marker_imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/budget_marker_imageView"
+        app:tint="@color/darkMediumGray" />
 
     <TextView
         android:id="@+id/healthy_marker_textView"
@@ -225,6 +226,7 @@
         app:layout_constraintTop_toTopOf="@+id/healthy_marker_imageView" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="11dp"
@@ -238,16 +240,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/summary_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/darkMediumGray"
                 android:text="TextView"
-                android:textSize="16sp"/>
+                android:textColor="@color/darkMediumGray"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

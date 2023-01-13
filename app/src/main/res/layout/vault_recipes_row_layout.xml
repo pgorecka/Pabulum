@@ -26,13 +26,13 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="@color/lightMediumGray"
+            app:strokeColor="@color/strokeColor"
             app:strokeWidth="1.6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white">
+                android:background="@color/cardBgColor">
 
                 <ImageView
                     android:id="@+id/vault_recipe_imageView"
@@ -56,7 +56,7 @@
                     android:fontFamily="@font/merriweather"
                     android:maxLines="2"
                     android:text="@{vaultEntity.result.title}"
-                    android:textColor="@color/darker"
+                    android:textColor="@color/titleColor"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +71,7 @@
                     android:ellipsize="end"
                     android:maxLines="3"
                     parseHtml="@{vaultEntity.result.summary}"
-                    android:textColor="@color/darkGray"
+                    android:textColor="@color/descriptionColor"
                     app:layout_constraintEnd_toEndOf="@+id/vault_title_textView"
                     app:layout_constraintStart_toStartOf="@+id/vault_title_textView"
                     app:layout_constraintTop_toBottomOf="@+id/vault_title_textView" />

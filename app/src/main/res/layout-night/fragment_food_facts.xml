@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/ic_facts_bg_light"
+        android:background="@drawable/ic_facts_bg_dark"
         tools:context=".ui.fragments.facts.FoodFactsContext">
 
         <com.google.android.material.card.MaterialCardView

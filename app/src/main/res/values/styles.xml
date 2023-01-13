@@ -6,15 +6,22 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
+        <item name="bottomNavigationStyle">@style/BottomNavigationView2</item>
         <item name="actionModeBackground">@color/contextualAction</item>
     </style>
     
     <style name="FeaturesActivityStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="actionBarStyle">@style/ActionBarStyle2</item>
         <item name="colorControlNormal">@color/white</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ActionBarStyle2" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/actionBarBgColor</item>
     </style>
     
     <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
@@ -26,6 +33,12 @@
 
     <style name="TabTextStyle" parent="TextAppearance.Design.Tab">
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BottomNavigationView2" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/bottomNavBackground</item>
+        <item name="itemIconTint">@color/bottom_nav_item</item>
+        <item name="itemTextColor">@color/bottom_nav_item</item>
     </style>
 
     <style name="ChipsStyle" parent="Widget.MaterialComponents.Chip.Filter">

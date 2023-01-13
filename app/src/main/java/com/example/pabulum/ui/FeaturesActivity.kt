@@ -73,7 +73,7 @@ class FeaturesActivity : AppCompatActivity() {
             try {
                 for (savedRecipe in vaultEntity) {
                     if (savedRecipe.result.id == args.result.id) {
-                        changeMenuItemColor(menuItem, R.color.yellow)
+                        changeMenuItemColor(menuItem, R.color.green)
                         savedRecipeId = savedRecipe.id
                         recipeSaved = true
                     }

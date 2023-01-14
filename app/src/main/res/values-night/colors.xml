@@ -42,9 +42,9 @@
     <color name="bottomNavItemColor">@color/mediumGray</color>
 
     // Chips
-    <color name="chipCheckedBackground">@color/colorAccent</color>
-    <color name="chipBackground">@color/lightGray</color>
-    <color name="chipCheckedTxtColor">@color/white</color>
-    <color name="chipTxtColor">@color/darkGray</color>
+    <color name="chipCheckedBackground">@color/dark</color>
+    <color name="chipBackground">@color/darker</color>
+    <color name="chipCheckedTxtColor">@color/lightGray</color>
+    <color name="chipTxtColor">@color/lightGray</color>
 
 </resources>

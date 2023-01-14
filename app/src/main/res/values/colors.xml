@@ -24,8 +24,6 @@
     <color name="contextualAction">@color/dark</color>
 
 
-    <color name="cardBgLightColor">#20325614</color>
-    <color name="actionBarBgColor">@color/colorPrimary</color>
     
     // Theme
     <color name="strokeColor">@color/lightMediumGray</color>
@@ -35,6 +33,10 @@
     <color name="backgroundColor">@color/lightGray</color>
     <color name="placeholderColor">@color/mediumGray</color>
     <color name="itemColor">@color/darker</color>
+    <color name="placeholder">@color/mediumGray</color>
+    <color name="cardBgLightColor">#20325614</color>
+    <color name="actionBarBgColor">@color/colorPrimary</color>
+
     
     //Bottom Nav
     <color name="bottomNavBackground">@color/white</color>

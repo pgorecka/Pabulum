@@ -12,7 +12,7 @@
     </style>
     
     <style name="FeaturesActivityStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/statusBar</item>
         <item name="actionBarStyle">@style/ActionBarStyle2</item>
         <item name="colorControlNormal">@color/white</item>
         <item name="colorPrimary">@color/colorPrimary</item>

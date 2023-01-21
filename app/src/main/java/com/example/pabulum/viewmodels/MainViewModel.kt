@@ -13,12 +13,15 @@ import com.example.pabulum.data.database.entities.VaultEntity
 import com.example.pabulum.models.FoodFact
 import com.example.pabulum.models.FoodRecipe
 import com.example.pabulum.util.NetworkResult
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.lang.Exception
+import javax.inject.Inject
 
-class MainViewModel @ViewModelInject constructor(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val repository: Repository,
     application: Application
 ) : AndroidViewModel(application) {

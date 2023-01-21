@@ -1,8 +1,9 @@
 package com.example.pabulum.data
 
 import android.content.Context
-import androidx.datastore.DataStore
+import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.*
+import androidx.datastore.preferences.core.*
 import com.example.pabulum.util.Constants.Companion.DEFAULT_DIET
 import com.example.pabulum.util.Constants.Companion.DEFAULT_TYPE
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_BACK_ONLINE
@@ -12,25 +13,27 @@ import com.example.pabulum.util.Constants.Companion.PREFERENCES_TITLE
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_TYPE
 import com.example.pabulum.util.Constants.Companion.PREFERENCES_TYPE_ID
 import dagger.hilt.android.qualifiers.ApplicationContext
-import dagger.hilt.android.scopes.ActivityRetainedScoped
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import java.io.IOException
 import javax.inject.Inject
 
-@ActivityRetainedScoped
+
+
+@ViewModelScoped
 class DataRepository @Inject constructor(@ApplicationContext private val context: Context) {
 
     private object Preferences {
-        val checkedType = preferencesKey<String>(PREFERENCES_TYPE)
-        val checkedTypeId = preferencesKey<Int>(PREFERENCES_TYPE_ID)
-        val checkedDiet = preferencesKey<String>(PREFERENCES_DIET)
-        val checkedDietId = preferencesKey<Int>(PREFERENCES_DIET_ID)
-        val backOnline = preferencesKey<Boolean>(PREFERENCES_BACK_ONLINE)
+        val checkedType = stringPreferencesKey(PREFERENCES_TYPE)
+        val checkedTypeId = intPreferencesKey(PREFERENCES_TYPE_ID)
+        val checkedDiet = stringPreferencesKey(PREFERENCES_DIET)
+        val checkedDietId = intPreferencesKey(PREFERENCES_DIET_ID)
+        val backOnline = booleanPreferencesKey(PREFERENCES_BACK_ONLINE)
     }
 
-    private val dataStore: DataStore<androidx.datastore.preferences.Preferences> = context.createDataStore(
+    private val dataStore: DataStore<androidx.datastore.preferences.core.Preferences> = context.createDataStore(
         name = PREFERENCES_TITLE
     )
 

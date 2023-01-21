@@ -93,6 +93,7 @@ class RecipesFragment : Fragment(), SearchView.OnQueryTextListener {
         showShimmer()
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.recipes_menu, menu)
 

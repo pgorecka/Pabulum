@@ -29,7 +29,7 @@ class Constants {
         // BOTTOM SHEET
         const val DEFAULT_TYPE = "appetizer"
         const val DEFAULT_DIET = "vegetarian"
-        const val DEFAULT_RECIPES_AMOUNT = "30"
+        const val DEFAULT_RECIPES_AMOUNT = "40"
         const val PREFERENCES_TITLE = "app_preferences"
         const val PREFERENCES_TYPE = "mealType"
         const val PREFERENCES_TYPE_ID = "mealTypeId"

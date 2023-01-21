@@ -18,11 +18,14 @@ import com.example.pabulum.util.Constants.Companion.QUERY_FILL_INGREDIENTS
 import com.example.pabulum.util.Constants.Companion.QUERY_NUMBER
 import com.example.pabulum.util.Constants.Companion.QUERY_SEARCH
 import com.example.pabulum.util.Constants.Companion.QUERY_TYPE
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class RecipesViewModel @ViewModelInject constructor(application: Application, private val dataRepository: DataRepository
+@HiltViewModel
+class RecipesViewModel @Inject constructor(application: Application, private val dataRepository: DataRepository
 ) : AndroidViewModel(application) {
 
     private var mealType = DEFAULT_TYPE

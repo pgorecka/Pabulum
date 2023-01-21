@@ -41,7 +41,7 @@
     //Bottom Nav
     <color name="bottomNavBackground">@color/white</color>
     <color name="bottomNavItemColor">@color/darkGray</color>
-    <color name="bottomNavCheckedItemColor">@color/colorPrimary</color>
+    <color name="bottomNavCheckedItemColor">@color/chipCheckedBackground</color>
     
     // Chips
     <color name="chipCheckedBackground">@color/colorAccent</color>

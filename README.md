@@ -1,6 +1,6 @@
 # Pabulum
 
-Pabulum is an Android application enabling users to browse recipes from numerous online sources, filtered by diet and meal type. A recipe’s summary displays a clear list of ingredients and additional nutritional information. Recipes can then be saved to a local database for future reference.
+Pabulum is an Android application, that enables users to browse recipes from numerous online sources, filtered by diet and meal type. A recipe’s summary displays a clear list of ingredients and additional nutritional information. Recipes can then be saved to a local database for future reference.
 
 Technologies used include:
 * Kotlin

@@ -50,10 +50,11 @@ For both, Bottom Sheet Dialog and Recipes Search, Safe Call functions were confi
 </p>
 <br>
 
-## Features Activity Fragment
+## Features Activity Fragments
 When a recipe is clicked it takes the user to the Features Activity. This activity doesn’t have a bottom navigation component. Instead there is a tab layout, divided into three tabs. User can easily navigate between tabs thanks to ViewPager swipe view, also referred to as horizontal paging. ViewPager is a widget provided by Androidx and it depends on the Material Components library. In the top right corner there is a vault icon. Once clicked, it saves the given recipe to a Recipes Vault, which is a local database. Vault icon turns to green when checked. 
 
 Features Activity is inhabited by three Fragments: Summary Fragment, Ingredients Fragment and Directions Fragment.
+
 
 <b>Summary Fragment</b>
   
@@ -66,6 +67,7 @@ Summary Fragment’s layout is constructed of an Image at the top and recipe ove
 <br>
 
 Another set of indicators is placed underneath the recipe’s title. These markers present as follows: ‘Vegan’, ‘Vegetarian’, ‘Dairy Free’, ‘Gluten Free’, ‘Budget’ and ‘Healthy’. Indicators turn to green color based on the response the Remote API gives to a search query. Bottom half of the layout is populated with recipe description text. 
+
 
 <b>Ingredients Fragment</b>
 
@@ -86,6 +88,7 @@ Directions Fragment’s layout is a WebView. A WebView is an Android component t
     <img src="https://user-images.githubusercontent.com/42835959/231085947-3d8e2258-59a4-45db-975d-013b6a1acada.png" height="512" width="243">
   </p>
 <br>
+
 
 ## Vault Fragment
 The layout in Vault Fragment displays a RecyclerView composed of Card Views stacked one on top of another. Card Views are populated with recipes that were added to a local database by pressing Vault Icon in the layout of Features Activity.

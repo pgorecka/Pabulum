@@ -100,3 +100,22 @@ When the local database has no records, it triggers views informing the user tha
 </p>
 <br>
 
+Recipes can be easily deleted from the Vault in two ways. First option utilizes a LongClick Listener, that answers when the user presses on an item for about a second.  In the latter case a Contextual Action Bar appears at top of the screen, displaying how many items got selected. A Contextual Action Bar is a temporary action bar that replaces the application’s UI for the duration of a given assignment.
+
+<br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/42835959/231095913-08150a26-39bd-45a6-b4f3-0a080c45830c.png" height="113" width="281">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <img src="https://user-images.githubusercontent.com/42835959/231095928-fbaf6644-c979-48fd-a723-b5d9fd2597b0.png" height="113" width="281">
+</p>
+<br>
+
+A Snackbar message appears at the bottom of a screen informing how many items got deleted. 
+
+When a user wants to remove all items from the Vault, there is no need to select recipes one by one. Instead all recipes can be deleted by clicking a Menu Icon in the top right corner of the screen and pressing ‘Remove All’. This triggers a function in MainViewModel that is responsible for removing all recipes saved to a local database.
+
+## Facts Fragment
+Facts Fragment shows a single Card View displaying a Food Fact text, fetched from the API. For the duration of data loading, a progress bar appears at the bottom of the screen. The most recent Food Fact is saved to the database and replaced after refreshing the view. A Safe Call function was created for network error events. When the API is unavailable, a Safe Call function returns the last cached Food Fact and displays it instead.
+
+
+

@@ -65,10 +65,10 @@ Summary Fragment’s layout is constructed of an Image at the top and recipe ove
 </p>
 <br>
 
-Another set of indicators is placed underneath the recipe’s title. These markers present as follows: ‘Vegan’, ‘Vegetarian’, ‘Dairy Free’, ‘Gluten Free’, ‘Budget’ and ‘Healthy’. Indicators turn to green color based on the response the Remote API gives to a search query. 
-Bottom half of the layout is populated with recipe description text. 
+Another set of indicators is placed underneath the recipe’s title. These markers present as follows: ‘Vegan’, ‘Vegetarian’, ‘Dairy Free’, ‘Gluten Free’, ‘Budget’ and ‘Healthy’. Indicators turn to green color based on the response the Remote API gives to a search query. Bottom half of the layout is populated with recipe description text. 
 
 <b>Ingredients Fragment</b>
+
 The layout of Ingredients Fragment is composed of a RecyclerView, which is a type of List View. It is used to display sets of data dynamically. Inside the RecyclerView are Card Views stacked vertically. Each card contains an ingredient thumbnail image, generic name, amount required, consistency and an original name, fetched directly from the source.
 
 <br>
@@ -77,7 +77,26 @@ The layout of Ingredients Fragment is composed of a RecyclerView, which is a typ
 </p>
 <br>
 
+<b>Directions Fragment</b>
 
+Directions Fragment’s layout is a WebView. A WebView is an Android component that allows displaying web pages as part of an activity layout. In the Pabulum software it is used to display a website from which the specific recipe was fetched. It contains ingredients, preparation instructions and sometimes more.
 
-  
-  
+<br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/42835959/231085947-3d8e2258-59a4-45db-975d-013b6a1acada.png" height="512" width="243">
+</p>
+<br>
+
+## Vault Fragment
+The layout in Vault Fragment displays a RecyclerView composed of Card Views stacked one on top of another. Card Views are populated with recipes that were added to a local database by pressing Vault Icon in the layout of Features Activity.
+
+When the local database has no records, it triggers views informing the user that the Vault is empty. These views are otherwise hidden. 
+
+<br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/42835959/231086356-63991594-acd6-4a0f-9181-1887746a632f.png" height="512" width="243">
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <img src="https://user-images.githubusercontent.com/42835959/231086371-bddee351-530c-4152-ae51-42e359fabcd4.png" height="512" width="243">
+</p>
+<br>
+

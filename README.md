@@ -55,8 +55,7 @@ When a recipe is clicked it takes the user to the Features Activity. This activi
 
 Features Activity is inhabited by three Fragments: Summary Fragment, Ingredients Fragment and Directions Fragment.
 
-
-<b>Summary Fragment</b>
+### Summary Fragment
   
 Summary Fragment’s layout is constructed of an Image at the top and recipe overview below it. In the bottom right corner of the Image there are likes and cooking time indicators, mentioned earlier in Recipes Fragment. 
 
@@ -68,8 +67,7 @@ Summary Fragment’s layout is constructed of an Image at the top and recipe ove
 
 Another set of indicators is placed underneath the recipe’s title. These markers present as follows: ‘Vegan’, ‘Vegetarian’, ‘Dairy Free’, ‘Gluten Free’, ‘Budget’ and ‘Healthy’. Indicators turn to green color based on the response the Remote API gives to a search query. Bottom half of the layout is populated with recipe description text. 
 
-
-<b>Ingredients Fragment</b>
+### Ingredients Fragment
 
 The layout of Ingredients Fragment is composed of a RecyclerView, which is a type of List View. It is used to display sets of data dynamically. Inside the RecyclerView are Card Views stacked vertically. Each card contains an ingredient thumbnail image, generic name, amount required, consistency and an original name, fetched directly from the source.
 
@@ -79,7 +77,7 @@ The layout of Ingredients Fragment is composed of a RecyclerView, which is a typ
 </p>
 <br>
 
-<b>Directions Fragment</b>
+### Directions Fragment
 
 Directions Fragment’s layout is a WebView. A WebView is an Android component that allows displaying web pages as part of an activity layout. In the Pabulum software it is used to display a website from which the specific recipe was fetched. It contains ingredients, preparation instructions and sometimes more.
 

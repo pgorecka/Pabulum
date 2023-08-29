@@ -79,7 +79,7 @@ The layout of Ingredients Fragment is composed of a RecyclerView, which is a typ
 
 ### Directions Fragment
 
-Directions Fragment’s layout is a WebView. A WebView is an Android component that allows displaying web pages as part of an activity layout. In the Pabulum software it is used to display a website from which the specific recipe was fetched. It contains ingredients, preparation instructions and sometimes more.
+Directions Fragment’s layout is a WebView. A WebView is an Android component that allows displaying web pages as part of an activity layout. In Pabulum it's used to display a website from which the specific recipe was fetched. It contains ingredients, preparation instructions and sometimes more.
 
 <br>
   <p align="center">
